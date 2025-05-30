@@ -1,0 +1,50 @@
+{
+  "name": "as-express5-type-issue",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "main": "./build/index.js",
+  "module": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./build/index.d.ts",
+        "default": "./build/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "dev": "tsx watch --include tsconfig.json -- ./index.ts",
+    "run": "tsx -- ./index.ts",
+    "build": "tsup --format esm --dts --clean"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.12.1",
+    "@as-integrations/express5": "^1.0.0",
+    "express": "^5.1.0",
+    "graphql": "^16.11.0",
+    "graphql-tag": "^2.12.6"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "tsup": "^8.5.0",
+    "tsx": "^4.19.4",
+    "typescript": "5.8.3"
+  },
+  "packageManager": "pnpm@10.11.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@apollo/protobufjs",
+      "esbuild"
+    ]
+  },
+  "engines": {
+    "node": ">=24.1.0"
+  },
+  "volta": {
+    "node": "24.1.0",
+    "pnpm": "10.11.0"
+  }
+}
