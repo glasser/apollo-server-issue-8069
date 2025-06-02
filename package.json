@@ -16,9 +16,7 @@
     }
   },
   "scripts": {
-    "dev": "tsx watch --include tsconfig.json -- ./index.ts",
-    "run": "tsx -- ./index.ts",
-    "build": "tsup --format esm --dts --clean"
+    "build": "tsc"
   },
   "dependencies": {
     "@apollo/server": "^4.12.1",
@@ -29,6 +27,7 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.2",
+    "@types/node": "22.15.29",
     "tsup": "^8.5.0",
     "tsx": "^4.19.4",
     "typescript": "5.8.3"
